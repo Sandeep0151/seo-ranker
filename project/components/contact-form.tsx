@@ -58,7 +58,7 @@ const onSubmit = async (data: FormData) => {
   setFullReport(null); // Clear previous result
 
   try {
-    const response = await fetch('http://127.0.0.1:8000/api/submit/', {
+    const response = await fetch('https://seoreport-backend.onrender.com/api/submit/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
