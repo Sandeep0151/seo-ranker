@@ -59,7 +59,7 @@ const onSubmit = async (data: FormData) => {
   setFullReport(null); // Clear previous result
 
   try {
-    const response = await fetch('http://127.0.0.1:8000/api/submit/', {
+    const response = await fetch('https://seoreport-backend.onrender.com/api/submit/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -227,10 +227,7 @@ const onSubmit = async (data: FormData) => {
           {fullReport && (
   <div id="report-section" className="mt-8 bg-white rounded-lg shadow p-6 text-base leading-relaxed prose max-w-none">
     <h3 className="text-xl font-bold text-gray-800 mb-4">🧠 AI SEO & Business Report</h3>
-    <ReactMarkdown
-  className="prose prose-blue max-w-none"
-  remarkPlugins={[remarkGfm]}
->
+    <ReactMarkdown remarkPlugins={[remarkGfm]}>
   {fullReport}
 </ReactMarkdown>
     
